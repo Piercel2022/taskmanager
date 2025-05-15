@@ -44,7 +44,7 @@ REQUIRED SECTIONS:
 
 
 
-**[Taskmanager]** 
+**[Taskmanager]** Le Gestionnaire de Tâches est une application Java qui permet aux utilisateurs de créer, gérer et suivre leurs tâches quotidiennes. Cette application console offre une solution simple mais robuste pour l'organisation personnelle.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -71,9 +71,11 @@ REQUIRED SECTIONS:
 ### Key Features <a name="key-features"></a>
 
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- Création de tâches avec titre, description et date d'échéance
+- Marquage des tâches comme terminées
+- Suppression des tâches obsolètes
+- Affichage filtré des tâches (toutes, en cours, terminées)
+- Persistance des données via base de données SQLite
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
