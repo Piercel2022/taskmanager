@@ -159,7 +159,6 @@ You can deploy this project using:
 - [ ] **[Des niveaux de priorité]**
 - [ ] **[Des rappels/notifications]**
 - [ ] **[Une recherche par mot-clé]**
-- [ ] **[new_feature_3]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
