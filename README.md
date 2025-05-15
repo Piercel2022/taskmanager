@@ -156,7 +156,7 @@ You can deploy this project using:
 
 - [ ] **[Une interface graphique (JavaFX ou Swing)]**
 - [ ] **[Des catégories pour les tâches]**
-- [ ] **[new_feature_3]**
+- [ ] **[Des niveaux de priorité]**
 - [ ] **[new_feature_3]**
 - [ ] **[new_feature_3]**
 - [ ] **[new_feature_3]**
