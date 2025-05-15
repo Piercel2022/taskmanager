@@ -71,11 +71,12 @@ REQUIRED SECTIONS:
 ### Key Features <a name="key-features"></a>
 
 
-- Création de tâches avec titre, description et date d'échéance
-- Marquage des tâches comme terminées
-- Suppression des tâches obsolètes
-- Affichage filtré des tâches (toutes, en cours, terminées)
-- Persistance des données via base de données SQLite
+- [ ] **[Création de tâches avec titre, description et date d'échéance]**
+- [ ] **[Marquage des tâches comme terminées]**
+- [ ] **[Suppression des tâches obsolètes]**
+- [ ] **[Affichage filtré des tâches (toutes, en cours, terminées)]**
+- [ ] **[Persistance des données via base de données SQLite]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
