@@ -158,7 +158,7 @@ You can deploy this project using:
 - [ ] **[Des catégories pour les tâches]**
 - [ ] **[Des niveaux de priorité]**
 - [ ] **[Des rappels/notifications]**
-- [ ] **[new_feature_3]**
+- [ ] **[Une recherche par mot-clé]**
 - [ ] **[new_feature_3]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
