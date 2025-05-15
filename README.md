@@ -40,11 +40,11 @@ REQUIRED SECTIONS:
 
 
 
-# 📖 [Fitenergie] <a name="about-project"></a>
+# 📖 [Taskmanager] <a name="about-project"></a>
 
 
 
-**[Fitenergie]** is a website that promote differents produits on the instagram social media platform
+**[Taskmanager]** 
 
 ## 🛠 Built With <a name="built-with"></a>
 
