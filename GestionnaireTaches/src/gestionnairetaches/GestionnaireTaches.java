@@ -67,6 +67,7 @@ public class GestionnaireTaches {
         }
         return false;
     }
+
     
     /**
      * Retourne toutes les tâches
