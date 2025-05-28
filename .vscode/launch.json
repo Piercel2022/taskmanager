@@ -1,7 +1,13 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
+    {
+      "type": "java",
+      "name": "TaskManagerApplication",
+      "request": "launch",
+      "mainClass": "gestionnairetaches/gestionnairetaches.TaskManagerApplication",
+      "projectName": ""
+    },
     {
       "type": "java",
       "name": "ApplicationGUI",
