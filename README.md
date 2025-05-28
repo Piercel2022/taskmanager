@@ -117,10 +117,16 @@ Clone this repository to your desired folder:
 
 ### Usage
 
+To build the project, execute the following command:
+
+```sh
+     mvn clean compile
+```
+
 To run the project, execute the following command:
 
 ```sh
-  
+  mvn clean javafx:run
 ```
 
 ### Deployment
