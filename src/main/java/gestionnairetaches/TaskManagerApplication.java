@@ -167,7 +167,7 @@ public class TaskManagerApplication extends Application {
                     setStyle("");
                 } else {
                     setText(formatTache(tache));
-                    if (tache.estTerminee()) {
+                    if (tache.isTerminee()) { // Changed from estTerminee() to isTerminee()
                         setStyle("-fx-background-color: #d5f4e6; -fx-text-fill: #27ae60; -fx-padding: 8px;");
                     } else {
                         LocalDate aujourd = LocalDate.now();
@@ -191,7 +191,7 @@ public class TaskManagerApplication extends Application {
      * Formate l'affichage d'une tâche
      */
     private String formatTache(Tache tache) {
-        String statut = tache.estTerminee() ? "✅" : "⏳";
+        String statut = tache.isTerminee() ? "✅" : "⏳"; // Changed from estTerminee() to isTerminee()
         return String.format("%s %s - %s (Échéance: %s)", 
                            statut, tache.getTitre(), tache.getDescription(), tache.getDateEcheance());
     }
@@ -270,7 +270,7 @@ public class TaskManagerApplication extends Application {
             return;
         }
         
-        if (tacheSelectionnee.estTerminee()) {
+        if (tacheSelectionnee.isTerminee()) { // Changed from estTerminee() to isTerminee()
             afficherAlerte("Tâche déjà terminée", "Cette tâche est déjà marquée comme terminée.");
             return;
         }
