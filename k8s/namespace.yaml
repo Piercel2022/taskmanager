@@ -1,0 +1,119 @@
+# k8s/namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: taskmanager
+  labels:
+    app: taskmanager
+
+---
+# k8s/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taskmanager
+  namespace: taskmanager
+  labels:
+    app: taskmanager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: taskmanager
+  template:
+    metadata:
+      labels:
+        app: taskmanager
+    spec:
+      containers:
+      - name: taskmanager
+        image: ghcr.io/your-username/taskmanager:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: DISPLAY
+          value: ":0"
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 5
+
+---
+# k8s/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: taskmanager-service
+  namespace: taskmanager
+  labels:
+    app: taskmanager
+spec:
+  selector:
+    app: taskmanager
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: ClusterIP
+
+---
+# k8s/ingress.yaml (optional)
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: taskmanager-ingress
+  namespace: taskmanager
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  tls:
+  - hosts:
+    - taskmanager.yourdomain.com
+    secretName: taskmanager-tls
+  rules:
+  - host: taskmanager.yourdomain.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: taskmanager-service
+            port:
+              number: 80
+
+---
+# k8s/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: taskmanager-config
+  namespace: taskmanager
+data:
+  application.properties: |
+    # Application configuration
+    app.name=TaskManager
+    app.version=1.0.0
+    
+    # Database configuration (if needed)
+    database.url=jdbc:h2:mem:taskdb
+    database.driver=org.h2.Driver
+    
+    # Logging configuration
+    logging.level=INFO
