@@ -1,5 +1,5 @@
-gestionnairetaches\Tache.class
-gestionnairetaches\GestionnaireTaches.class
+gestionnairetaches/TaskManagerApplication.class
+gestionnairetaches/GestionnaireTaches.class
 module-info.class
-gestionnairetaches\TaskManagerApplication.class
-gestionnairetaches\TaskManagerApplication$1.class
+gestionnairetaches/TaskManagerApplication$1.class
+gestionnairetaches/Tache.class
