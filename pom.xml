@@ -28,6 +28,7 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>${javafx.version}</version>
+            <classifier>linux</classifier> 
         </dependency>
         
         <!-- JavaFX FXML -->
@@ -35,6 +36,7 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>${javafx.version}</version>
+            <classifier>linux</classifier> 
         </dependency>
         
         <!-- JavaFX Base -->
@@ -42,6 +44,7 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-base</artifactId>
             <version>${javafx.version}</version>
+            <classifier>linux</classifier> 
         </dependency>
         
         <!-- JUnit for testing -->
@@ -52,6 +55,12 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <repositories>
+       <repository>
+        <id>openjfx</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+      </repository>
+     </repositories>
     
     <build>
         <plugins>
