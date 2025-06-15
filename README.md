@@ -160,11 +160,11 @@ You can deploy this project using:
 
 
 
-- [ ] **[Une interface graphique (JavaFX ou Swing)]**
-- [ ] **[Des catégories pour les tâches]**
-- [ ] **[Des niveaux de priorité]**
-- [ ] **[Des rappels/notifications]**
-- [ ] **[Une recherche par mot-clé]**
+- [ ] **Une interface graphique (JavaFX ou Swing)**
+- [ ] **Des catégories pour les tâches**
+- [ ] **Des niveaux de priorité**
+- [ ] **Des rappels/notifications**
+- [ ] **Une recherche par mot-clé**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
